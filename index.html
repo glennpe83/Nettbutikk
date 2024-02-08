@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nettbutikk</title>
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <link rel="stylesheet" href="./CSS/global.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Nettbutikk</h1>
+      <div id="cart">
+        <p>Handlekurv</p>
+        <span id="cart-item">0</span>
+      </div>
+    </header>
+
+ 
+
+    <section>
+      <div class="flexbox">
+        <div class="container">
+          <!-- Container til produktene-->
+          <div id="products-container"></div>
+        </div>
+        <div class="dropdown">
+          <!-- Dropdown for å sortere produkter-->
+          <div id="sort-options">
+            <label for="sort-select">Sorter etter:</label>
+            <select id="sort-select">
+              <option value="dropdown-default">----</option>
+              <option value="name-a-aa">Navn A - Å</option>
+              <option value="name-aa-a">Navn Å - A</option>
+              <option value="price-high">Pris høy</option>
+              <option value="price-low">Pris lav</option>
+              <option value="price-low">Årsmodell</option>
+            </select>
+            <input type="text" id="search-input" placeholder="Søk etter produkt" />
+            <button  id="search-btn">Søk</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./JS/script.js"></script>
+  </body>
+</html>
