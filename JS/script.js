@@ -82,7 +82,7 @@ const products = [
 ];
 
 
-/* console.log(products); */
+console.log(products);
 
 //Hent containeren der produktene vil bli lagt til
 const productsContainer = document.getElementById('products-container');
@@ -124,3 +124,151 @@ products.forEach(product => {
 
     productsContainer.appendChild(productElement);
 });
+
+function sortAlph() {
+    products.sort(function(a, b) {
+        if (a.name < b.name) {
+            return -1;
+        }
+        if (a.name > b.name) {
+            return 1;
+        }
+        return 0;
+    });
+
+
+    // Tøm containeren før du legger til de sorterte produktene
+    productsContainer.innerHTML = '';
+
+    // Legg til de sorterte produktene i HTML-dokumentet på nytt
+    products.forEach(product => {
+        const productElement = document.createElement('div');
+        productElement.classList.add('products');
+
+        //Legg til navn 
+        const nameElement = document.createElement('h2');
+        nameElement.textContent = product.name;
+        productElement.appendChild(nameElement);
+
+        //Legg til bilder
+        const imageElement = document.createElement('img');
+        imageElement.src = product.image;
+        imageElement.style.width = '200px';
+        imageElement.style.height = '200px';
+        productElement.appendChild(imageElement);
+
+        //Legg til årstall
+        const yearElement = document.createElement('p');
+        yearElement.textContent = `Årstall: ${product.year}`;
+        productElement.appendChild(yearElement);
+
+        //Legg til km-stand
+        const distanceElement = document.createElement('p');
+        distanceElement.textContent = `KM-stand ${product.distance}`;
+        productElement.appendChild(distanceElement);
+        
+
+        //Legg til pris
+        const priceElement = document.createElement('h3');
+        priceElement.textContent = `Pris ${product.price} kroner`;
+        productElement.appendChild(priceElement);
+        
+
+        productsContainer.appendChild(productElement);
+    });
+}
+
+function sortYear() {
+    products.sort(function(a,b){
+        return a.year - b.year;
+    }) ;
+
+       // Tøm containeren før du legger til de sorterte produktene
+       productsContainer.innerHTML = '';
+
+       // Legg til de sorterte produktene i HTML-dokumentet på nytt
+       products.forEach(product => {
+           const productElement = document.createElement('div');
+           productElement.classList.add('products');
+   
+           //Legg til navn 
+           const nameElement = document.createElement('h2');
+           nameElement.textContent = product.name;
+           productElement.appendChild(nameElement);
+   
+           //Legg til bilder
+           const imageElement = document.createElement('img');
+           imageElement.src = product.image;
+           imageElement.style.width = '200px';
+           imageElement.style.height = '200px';
+           productElement.appendChild(imageElement);
+   
+           //Legg til årstall
+           const yearElement = document.createElement('p');
+           yearElement.textContent = `Årstall: ${product.year}`;
+           productElement.appendChild(yearElement);
+   
+           //Legg til km-stand
+           const distanceElement = document.createElement('p');
+           distanceElement.textContent = `KM-stand ${product.distance}`;
+           productElement.appendChild(distanceElement);
+           
+   
+           //Legg til pris
+           const priceElement = document.createElement('h3');
+           priceElement.textContent = `Pris ${product.price} kroner`;
+           productElement.appendChild(priceElement);
+           
+   
+           productsContainer.appendChild(productElement);
+       });
+}
+
+function sortPrice(){
+    products.sort(function(a,b) {
+    return a.price - b.price;
+    });
+       // Tøm containeren før du legger til de sorterte produktene
+       productsContainer.innerHTML = '';
+
+       // Legg til de sorterte produktene i HTML-dokumentet på nytt
+       products.forEach(product => {
+           const productElement = document.createElement('div');
+           productElement.classList.add('products');
+   
+           //Legg til navn 
+           const nameElement = document.createElement('h2');
+           nameElement.textContent = product.name;
+           productElement.appendChild(nameElement);
+   
+           //Legg til bilder
+           const imageElement = document.createElement('img');
+           imageElement.src = product.image;
+           imageElement.style.width = '200px';
+           imageElement.style.height = '200px';
+           productElement.appendChild(imageElement);
+   
+           //Legg til årstall
+           const yearElement = document.createElement('p');
+           yearElement.textContent = `Årstall: ${product.year}`;
+           productElement.appendChild(yearElement);
+   
+           //Legg til km-stand
+           const distanceElement = document.createElement('p');
+           distanceElement.textContent = `KM-stand ${product.distance}`;
+           productElement.appendChild(distanceElement);
+           
+   
+           //Legg til pris
+           const priceElement = document.createElement('h3');
+           priceElement.textContent = `Pris ${product.price} kroner`;
+           productElement.appendChild(priceElement);
+           
+   
+           productsContainer.appendChild(productElement);
+       });
+}
+
+
+
+

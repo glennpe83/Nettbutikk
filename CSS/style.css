@@ -7,6 +7,14 @@ header {
     padding: 2rem;
 }
 
+header span {
+    font-weight: 500;
+}
+
+header p {
+    font-weight: 700;
+}
+
 .flexbox {
     display: flex;
     justify-content: center;
@@ -18,7 +26,6 @@ header {
 .container {
     width: 70%;
 }
-
 
 
 
@@ -53,5 +60,9 @@ h2 {
 
 
 
-
+button {
+    padding: 1rem;
+    margin: 1rem 1rem;
+    border-radius: 10px;
+}
 
